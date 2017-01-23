@@ -18,3 +18,12 @@ Route::get('/', function () {
 Route::get('/profile', function () {
   return "Arnon Puitrakul";
 });
+
+Route::get('/birthyear', 'ProfileController@getYear');
+Route::get('/{id}/name', 'ProfileController@getName');
+Route::get('/{id}/surname', 'ProfileController@getSurname');
+
+// /profile/name -> Your Name
+// /profile/surname -> Your Surname
+// /profile/brithday -> Your brithday
+// /profile/age -> Your age -> Calculate Present Year - Your birthyear -> ศค
