@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/profile', function () {
-  return "Arnon Puitrakul";
-});
+Route::get('/profile', 'ProfileController@getProfile');
 
 Route::get('/birthyear', 'ProfileController@getYear');
 Route::get('/{id}/name', 'ProfileController@getName');
