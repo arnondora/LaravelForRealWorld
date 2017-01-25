@@ -12,12 +12,20 @@
       </div>
 
       <div class = "col-md-6">
-        <p>Name : Arnon Puitrakul</p>
-        <p>Student - Faculty of ICT, Mahidol University</p>
-        <p>Website : <a href = "https://www.arnondora.in.th">www.arnondora.in.th</a></p>
-        <p>MUICT#12 SB#100 MSP#17 YWC#14</p>
-      </div>
+        @foreach ($profiles as $profile)
+          @if ($loop->iteration == 2)
+            <p>This is the second iteration</p>
+          @else
+            <p>This is the first iteration</p>
+          @endif
 
+          <p>{{$loop->iteration}}. Name : {{$profile['name']}}</p>
+          <p>{{$profile['occupation']}}</p>
+          <p>Website : <a href = "{{$profile['website']}}">{{$profile['website']}}</a></p>
+          <p>{{$profile['tags']}}</p>
+          <hr>
+        @endforeach
+      </div>
     </div>
   </body>
 </html>
