@@ -8,7 +8,9 @@ class ProfileController extends Controller
 {
     function getProfile ()
     {
-      return view('profile');
+      $adam = ['name' => 'Adam Levine', 'occupation' => 'Singer - Maroon 5', 'website' => 'maroon5.com', 'tags' => '#Maroon5 #Adam'];
+      $arnon = ['name' => 'Arnon Puitrakul', 'occupation' => 'Student - Faculty of ICT, Mahidol University', 'website' => 'https://www.arnondora.in.th', 'tags' => '#MUICT12 #MSP17 #YWC14'];
+      return view('profile',['profiles' => [$adam, $arnon]]);
     }
 
     function getYear ()
