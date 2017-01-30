@@ -17,9 +17,9 @@
 //
 // Route::get('/profile', 'ProfileController@getProfile');
 //
-// Route::get('/birthyear', 'ProfileController@getYear');
-// Route::get('/{id}/name', 'ProfileController@getName');
-// Route::get('/{id}/surname', 'ProfileController@getSurname');
+Route::get('/birthyear', 'ProfileController@getYear');
+Route::get('/{id}/name', 'ProfileController@getName');
+Route::get('/{id}/surname', 'ProfileController@getSurname');
 
 Route::get('/', 'ReminderController@home');
 
