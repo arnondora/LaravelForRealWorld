@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ReminderController extends Controller
 {
-    public home ()
+    public function home ()
     {
       $reminders = [
         'Buy Milk',
