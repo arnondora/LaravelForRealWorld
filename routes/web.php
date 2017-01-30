@@ -21,9 +21,7 @@
 // Route::get('/{id}/name', 'ProfileController@getName');
 // Route::get('/{id}/surname', 'ProfileController@getSurname');
 
-route::get('/', function () {
-  return view('home');
-});
+Route::get('/', 'ReminderController@home');
 
 // /profile/name -> Your Name
 // /profile/surname -> Your Surname
