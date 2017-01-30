@@ -11,15 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+//
+// Route::get('/profile', 'ProfileController@getProfile');
+//
+// Route::get('/birthyear', 'ProfileController@getYear');
+// Route::get('/{id}/name', 'ProfileController@getName');
+// Route::get('/{id}/surname', 'ProfileController@getSurname');
+
+route::get('/', function () {
+  return view('home');
 });
-
-Route::get('/profile', 'ProfileController@getProfile');
-
-Route::get('/birthyear', 'ProfileController@getYear');
-Route::get('/{id}/name', 'ProfileController@getName');
-Route::get('/{id}/surname', 'ProfileController@getSurname');
 
 // /profile/name -> Your Name
 // /profile/surname -> Your Surname
