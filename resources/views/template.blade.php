@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Example Reminder App</title>
-    <link rel="stylesheet" href="{{elixir('app.css')}}">
+    <link rel="stylesheet" href="{{elixir('css/app.css')}}">
   </head>
   <body>
 
