@@ -37,7 +37,7 @@ class ProfileController extends Controller
 
     function getBirthYear ($year)
     {
-      return 2539 - 543;
+      return $year - 543;
     }
 
     function getflskjf ()
