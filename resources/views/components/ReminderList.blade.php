@@ -5,7 +5,12 @@
     @foreach ($reminders as $reminder)
       <div class = "well">
         <span>{{$reminder->body}}</span>
-        <a class = "btn btn-success pull-right">Finish</a>
+        {{-- <a class = "btn btn-success pull-right">Finish</a> --}}
+        <form method="post" action = "/reminder/delete">
+          {{csrf_field()}}
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" class = "btn btn-success" value="Finish">
+        </form>
       </div>
     @endforeach
 
