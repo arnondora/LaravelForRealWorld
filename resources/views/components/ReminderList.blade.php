@@ -4,7 +4,7 @@
   <div class = 'row'>
     @foreach ($reminders as $reminder)
       <div class = "well">
-        <span>{{$reminder}}</span>
+        <span>{{$reminder->body}}</span>
         <a class = "btn btn-success pull-right">Finish</a>
       </div>
     @endforeach

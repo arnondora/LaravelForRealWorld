@@ -23,6 +23,8 @@ Route::get('/{id}/surname', 'ProfileController@getSurname');
 
 Route::get('/', 'ReminderController@home');
 
+Route::post('/reminder/new', 'ReminderController@addReminder');
+
 // /profile/name -> Your Name
 // /profile/surname -> Your Surname
 // /profile/brithday -> Your brithday
