@@ -21,4 +21,12 @@ class ReminderController extends Controller
       DB::table('Reminder')->insert(['body' => $body, 'isFinished' => false, 'createdUserID' => 1]);
       return back();
     }
+
+    public function deleteReminder (Request $request)
+    {
+      $id = $request->id;
+
+      DB::table('Reminder')->where('id',$id)->delete();
+      return back();
+    }
 }
