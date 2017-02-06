@@ -20,20 +20,24 @@ class ProfileController extends Controller
       return $bYear + 543;
     }
 
-    function getName ($id)
+    function getName ()
     {
-      return getCustomers()[$id-1]['Name'];
+      return "Arnon";
     }
 
-    function getSurname ($id)
+    function getSurname ()
     {
-      $customers =
-      [
-          ["Name" => 'Arnon', 'Surname' => 'Puitrakul'],
-          ["Name" => "Lewis", "Surname" => 'Gunner']
-      ];
+      return "Puitrakul";
+    }
 
-      return $customers[$id-1]['Surname'];
+    function getBirthday ()
+    {
+      return date_create("08/03/1996");
+    }
+
+    function getBirthYear ($year)
+    {
+      return 2539 - 543;
     }
 
     function getflskjf ()
