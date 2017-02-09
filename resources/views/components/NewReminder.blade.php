@@ -6,6 +6,15 @@
   </div>
 
   <div class = "form-group">
+    <label>Type : </label>
+    <select name = "type" class = "form-control">
+      @foreach ($types as $type)
+        <<option value="{{$type->id}}">{{$type->typename}}</option>
+      @endforeach
+    </select>
+  </div>
+
+  <div class = "form-group">
     {{csrf_field()}}
     <input class = "btn btn-primary" type="submit" value="Create New Reminder">
   </div>

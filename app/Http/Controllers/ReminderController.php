@@ -8,12 +8,15 @@ use DB;
 
 use App\Reminder;
 
+use App\ReminderType;
+
 class ReminderController extends Controller
 {
     public function home ()
     {
       $reminders = Reminder::orderBy('id','desc')->get();
-      return view('home',['reminders' => $reminders]);
+      $types = ReminderType::get();
+      return view('home',['reminders' => $reminders, 'types' => $types]);
     }
 
     public function addReminder (Request $request)
@@ -21,6 +24,7 @@ class ReminderController extends Controller
       $reminder = new Reminder();
       $reminder->body = $request->reminder;
       $reminder->isFinished = false;
+      $reminder->ReminderType = $request->type;
       $reminder->createdUserID = 1;
 
       $reminder->save();

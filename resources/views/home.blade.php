@@ -5,7 +5,7 @@
 
     @include('components.ReminderList',['reminders' => $reminders])
 
-    @include('components.NewReminder')
+    @include('components.NewReminder', ['types' => $types])
 
   </div>
 @endsection

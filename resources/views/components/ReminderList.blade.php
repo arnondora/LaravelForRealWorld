@@ -4,7 +4,7 @@
   <div class = 'row'>
     @foreach ($reminders as $reminder)
       <div class = "well">
-        <span>{{$reminder->body}}</span>
+        <span>{{$reminder->body}} <b>({{$reminder->type->typename}})</b></span>
         {{-- <a class = "btn btn-success pull-right">Finish</a> --}}
         <form method="post" action = "/reminder/delete">
           {{csrf_field()}}
