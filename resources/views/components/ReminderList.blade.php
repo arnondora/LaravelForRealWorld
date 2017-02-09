@@ -9,6 +9,7 @@
         <form method="post" action = "/reminder/delete">
           {{csrf_field()}}
           <input type="hidden" name="_method" value="delete">
+          <input type="hidden" name="id" value="{{$reminder->id}}">
           <input type="submit" class = "btn btn-success" value="Finish">
         </form>
       </div>
