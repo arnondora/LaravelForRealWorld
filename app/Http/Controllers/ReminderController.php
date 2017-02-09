@@ -32,7 +32,7 @@ class ReminderController extends Controller
     {
       $id = $request->id;
 
-      DB::table('Reminder')->where('id',$id)->delete();
+      Reminder::find($id)->delete();
       return back();
     }
 }
