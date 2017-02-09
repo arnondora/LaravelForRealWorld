@@ -18,9 +18,13 @@ class ReminderController extends Controller
 
     public function addReminder (Request $request)
     {
-      $body = $request->reminder;
+      $reminder = new Reminder();
+      $reminder->body = $request->reminder;
+      $reminder->isFinished = false;
+      $reminder->createdUserID = 1;
 
-      DB::table('Reminder')->insert(['body' => $body, 'isFinished' => false, 'createdUserID' => 1]);
+      $reminder->save();
+
       return back();
     }
 
