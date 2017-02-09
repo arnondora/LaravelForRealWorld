@@ -20,6 +20,7 @@
 Route::get('/birthyear', 'ProfileController@getYear');
 Route::get('/{id}/name', 'ProfileController@getName');
 Route::get('/{id}/surname', 'ProfileController@getSurname');
+Route::get('/myprofile', 'ProfileController@myProfile');
 
 Route::get('/', 'ReminderController@home');
 

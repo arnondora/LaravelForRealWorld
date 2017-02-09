@@ -13,6 +13,11 @@ class ProfileController extends Controller
       return view('profile',['profiles' => [$adam, $arnon]]);
     }
 
+    function myProfile ()
+    {
+      return view ('myprofile',['name' => 'Arnon Puitrakul', 'birthday' => date_create("08/03/1996"), 'facebookURL' => 'facebook.com/arnondora']);
+    }
+
     function getYear ()
     {
       $bYear = 1996;
