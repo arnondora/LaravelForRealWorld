@@ -10,6 +10,10 @@ class ReminderTypeController extends Controller
 {
     public function NewReminderType (Request $request)
     {
+      $this->validate($request, [
+        'name' => 'required|unique:ReminderType,typename'
+      ]);
+
       $typeName = $request->name;
 
       $reminderType = new ReminderType ();
