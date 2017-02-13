@@ -39,4 +39,9 @@ class ReminderController extends Controller
       Reminder::find($id)->delete();
       return back();
     }
+
+    public function showFinishedReminder ()
+    {
+      return view('FinishedReminder',['reminders' => Reminder::onlyTrashed()->get()]);
+    }
 }
