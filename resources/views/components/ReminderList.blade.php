@@ -2,10 +2,6 @@
   <h2>Your Reminder(s)</h2>
 
   <div class = 'row'>
-    <a href = '/finished'>Show Finished Reminder</a>
-  </div>
-
-  <div class = 'row'>
     @foreach ($reminders as $reminder)
       <div class = "well">
         <span>{{$reminder->body}} <b>({{$reminder->type->typename}})</b></span>
