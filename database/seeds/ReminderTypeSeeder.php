@@ -2,7 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+use App\ReminderType;
+
+class ReminderTypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(ReminderTypeSeeder::class);
-        $this->call(ReminderSeeder::class);
+        ReminderType::create([
+          'typename' => 'Home'
+        ]);
     }
 }
