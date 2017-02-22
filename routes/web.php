@@ -30,6 +30,8 @@ Route::delete('/reminder/delete', 'ReminderController@deleteReminder');
 
 Route::post('/remindertype/new', 'ReminderTypeController@NewReminderType');
 
+Route::get('/remindertype', 'ReminderTypeController@listReminder');
+
 // /profile/name -> Your Name
 // /profile/surname -> Your Surname
 // /profile/brithday -> Your brithday

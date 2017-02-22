@@ -24,4 +24,9 @@ class ReminderTypeController extends Controller
       return back()->with(['ReminderTypeStatus' => 'Add new reminder type successfully']);
 
     }
+
+    public function listReminder ()
+    {
+      return response()->json(ReminderType::all());
+    }
 }
