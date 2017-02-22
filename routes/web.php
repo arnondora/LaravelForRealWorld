@@ -32,6 +32,10 @@ Route::post('/remindertype/new', 'ReminderTypeController@NewReminderType');
 
 Route::get('/remindertype', 'ReminderTypeController@listReminder');
 
+Route::get('/file', 'FileController@home');
+
+Route::post('/file/upload', 'FileController@upload');
+Route::get('/file/{fileName}', 'FileController@download');
 // /profile/name -> Your Name
 // /profile/surname -> Your Surname
 // /profile/brithday -> Your brithday
