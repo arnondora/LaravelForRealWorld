@@ -1,6 +1,8 @@
 <form method = "post" action = "/remindertype/new">
   <h2>New Reminder Type</h2>
-  <div class="alert alert-success" role="alert">{{session('ReminderTypeStatus')}}</div>
+  @if (session('ReminderTypeStatus') != null)
+    <div class="alert alert-success" role="alert">{{session('ReminderTypeStatus')}}</div>
+  @endif
   <div class = "form-group">
     <label>Reminder Type : </label>
     <input type="text" name="name" class = "form-control" placeholder="Reminder Type Name">
