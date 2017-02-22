@@ -21,6 +21,7 @@ class ReminderTypeController extends Controller
 
       $reminderType->save();
 
+      session(['ReminderTypeStatus' => 'Add new reminder type successfully']);
       return back();
 
     }
